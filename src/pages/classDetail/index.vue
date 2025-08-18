@@ -1,3 +1,11 @@
+<!--
+ * @Author: wangao
+ * @Date: 2025-02-25 21:11:37
+ * @LastEditTime: 2025-08-17 09:58:03
+ * @LastEditors: wangao
+ * @Description: 
+ * @FilePath: /vue3-vant-mobile/src/pages/classDetail/index.vue
+-->
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { showToast } from 'vant'
@@ -22,7 +30,8 @@ function SignUp() {
 
 <template>
   <div style="min-height: 92vh;width: 100vw;background: white">
-    <div class="flex items-center justify-center" style="background: white;padding: 10px 0;box-sizing: border-box; border-bottom: 1px solid #f5f5f5;">
+    <div class="flex items-center justify-center"
+      style="background: white;padding: 10px 0;box-sizing: border-box; border-bottom: 1px solid #f5f5f5;">
       <img style="height: 160px;width: 160px;object-fit: cover" :src="img as string" alt="..">
     </div>
 
@@ -31,7 +40,17 @@ function SignUp() {
     </div>
     <van-cell title="青年夜校名称" :value="data.school_name" />
     <van-cell title="具体地址" :value="data.location" />
-    <van-cell title="开办课程名称" :value="data.title" />
+    <van-cell title="开办课程名称">
+      <template #value>
+        <div style="display: flex;align-items: center;">
+          <span v-if="data.is_young">⭐️</span>
+          <div style="font-size: 15px;text-align: left;">{{ data.title }}</div>
+        </div>
+      </template>
+    </van-cell>
+    <van-cell title="课程介绍" :value="data.course_intro">
+    </van-cell>
+    <van-cell title="师资介绍" :value="data.teacher_intro" />
     <van-cell title="开课日期" :value="data.attend_time" />
     <van-cell title="课程周期" :value="`${data.times}节`" />
     <van-cell title="收费标准" :value="data.attend_desc || '--'" />
@@ -53,7 +72,7 @@ function SignUp() {
 </template>
 
 <style scoped>
-  .title {
+.title {
   height: 80px;
   background: white;
   padding: 10px 10px;
@@ -64,6 +83,7 @@ function SignUp() {
   color: black;
   border-bottom: 1px solid #f5f5f5;
 }
+
 .img-box {
   display: flex;
   flex-direction: column;
@@ -76,9 +96,9 @@ function SignUp() {
   margin-right: 20px;
 }
 
-.van-cell__value {
+:deep(.van-cell__value) {
   flex: none;
-  width: 75%;
+  width: 60%;
   text-align: left;
 }
 </style>
