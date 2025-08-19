@@ -253,7 +253,7 @@ const allOptions = [
     ],
   },
   {
-    text: '文体艺术（舞蹈，体育，乐器，国学等）',
+    text: '文体艺术类',
     value: '002',
     children: [
       { text: '舞蹈', value: '0021' },

@@ -2,7 +2,7 @@
 // import useRouteCache from '@/stores/modules/routeCache'
 
 useHead({
-  title: '浦东青年夜校春季班',
+  title: '浦东青年夜校秋季班',
   meta: [
     {
       name: 'description',

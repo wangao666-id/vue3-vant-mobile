@@ -3,7 +3,7 @@
  * @Date: 2025-02-25 21:11:37
  * @LastEditTime: 2025-08-17 09:58:03
  * @LastEditors: wangao
- * @Description: 
+ * @Description:
  * @FilePath: /vue3-vant-mobile/src/pages/classDetail/index.vue
 -->
 <script setup lang="ts">
@@ -52,8 +52,10 @@ function SignUp() {
     </van-cell>
     <van-cell title="师资介绍" :value="data.teacher_intro" />
     <van-cell title="开课日期" :value="data.attend_time" />
-    <van-cell title="课程周期" :value="`${data.times}节`" />
+    <van-cell title="课程周期" :value="`${data.course_cycle}节`" />
     <van-cell title="收费标准" :value="data.attend_desc || '--'" />
+    <van-cell title="结课日期" :value="data.end_time" />
+    <van-cell title="课次" :value="data.times" />
     <van-cell title="备注" :value="data.remark || '--'" />
 
     <div style="padding: 10px 10px;box-sizing: border-box; background: white">
