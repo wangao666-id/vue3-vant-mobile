@@ -26,7 +26,7 @@ function clickItem() {
     query: {
       img: imgSrc.value,
       title: props.data.title,
-      showCard:String(props.show),
+      showCard: String(props.show),
       data: JSON.stringify(props.data),
     },
   })
@@ -39,7 +39,8 @@ function clickItem() {
       <!--      <div class="pic" /> -->
       <img class="pic" :src="imgSrc" alt="">
       <div class="info">
-        <div>
+        <div style="display: flex">
+          <div v-if="data.is_young" class="xx-img" />
           <span class="title">{{ data.title }}</span>
           <span />
         </div>
@@ -113,6 +114,14 @@ function clickItem() {
 .ml-auto {
   color: #999;
   font-size: 14px;
+}
+
+.xx-img {
+  background-image: url('@/assets/images/xx.png');
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .item-space {

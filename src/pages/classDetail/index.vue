@@ -30,8 +30,10 @@ function SignUp() {
 
 <template>
   <div style="min-height: 92vh;width: 100vw;background: white">
-    <div class="flex items-center justify-center"
-      style="background: white;padding: 10px 0;box-sizing: border-box; border-bottom: 1px solid #f5f5f5;">
+    <div
+      class="flex items-center justify-center"
+      style="background: white;padding: 10px 0;box-sizing: border-box; border-bottom: 1px solid #f5f5f5;"
+    >
       <img style="height: 160px;width: 160px;object-fit: cover" :src="img as string" alt="..">
     </div>
 
@@ -43,18 +45,19 @@ function SignUp() {
     <van-cell title="开办课程名称">
       <template #value>
         <div style="display: flex;align-items: center;">
-          <span v-if="data.is_young">⭐️</span>
-          <div style="font-size: 15px;text-align: left;">{{ data.title }}</div>
+<!--          <div v-if="data.is_young" class="xx-img" />-->
+          <div style="font-size: 15px;text-align: left;">
+            {{ data.title }}
+          </div>
         </div>
       </template>
     </van-cell>
-    <van-cell title="课程介绍" :value="data.course_intro">
-    </van-cell>
+    <van-cell title="课程介绍" :value="data.course_intro" />
     <van-cell title="师资介绍" :value="data.teacher_intro" />
     <van-cell title="开课日期" :value="data.attend_time" />
     <van-cell title="课程周期" :value="`${data.course_cycle}节`" />
     <van-cell title="收费标准" :value="data.attend_desc || '--'" />
-    <van-cell title="结课日期" :value="data.end_time" />
+    <van-cell title="预计结课时间" :value="data.end_time" />
     <van-cell title="课次" :value="data.times" />
     <van-cell title="备注" :value="data.remark || '--'" />
 
@@ -84,6 +87,13 @@ function SignUp() {
   margin-bottom: 10px;
   color: black;
   border-bottom: 1px solid #f5f5f5;
+}
+.xx-img {
+  background-image: url('@/assets/images/xx.png');
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .img-box {
