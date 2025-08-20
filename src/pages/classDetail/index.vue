@@ -55,7 +55,7 @@ function SignUp() {
     <van-cell title="课程介绍" :value="data.course_intro" />
     <van-cell title="师资介绍" :value="data.teacher_intro" />
     <van-cell title="开课日期" :value="data.attend_time" />
-    <van-cell title="课程周期" :value="`${data.course_cycle}节`" />
+    <van-cell title="课程周期" :value="`${data.course_cycle}`" />
     <van-cell title="收费标准" :value="data.attend_desc || '--'" />
     <van-cell title="预计结课时间" :value="data.end_time" />
     <van-cell title="课次" :value="data.times" />

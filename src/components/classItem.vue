@@ -40,7 +40,8 @@ function clickItem() {
       <img class="pic" :src="imgSrc" alt="">
       <div class="info">
         <div style="display: flex">
-          <div v-if="data.is_young" class="xx-img" />
+          <div v-if="data.is_young"  class="xx-img" />
+<!--          <span style="color: black" v-if="data.is_young">*</span>-->
           <span class="title">{{ data.title }}</span>
           <span />
         </div>
@@ -118,9 +119,12 @@ function clickItem() {
 
 .xx-img {
   background-image: url('@/assets/images/xx.png');
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 3px;
   background-size: 100% 100%;
+  flex-shrink: 0;
   background-repeat: no-repeat;
 }
 

@@ -246,7 +246,7 @@ const allOptions = [
 
       { text: '美妆美甲', value: '0016' },
       { text: '办公技能', value: '0017' },
-      { text: '面试技巧', value: '0018' },
+      // { text: '面试技巧', value: '0018' },
 
       { text: '职场心理', value: '0019' },
       { text: '语言', value: '0020' },
@@ -287,10 +287,10 @@ const allOptions = [
         text: '绘画',
         value: '00291',
       },
-      {
-        text: '其他运动',
-        value: '00292',
-      },
+      // {
+      //   text: '其他运动',
+      //   value: '00292',
+      // },
       //   {
       //   text: '瑜伽普拉提',
       //   value: '00293',
