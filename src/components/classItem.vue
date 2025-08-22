@@ -119,10 +119,10 @@ function clickItem() {
 
 .xx-img {
   background-image: url('@/assets/images/xx.png');
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   position: relative;
-  top: 3px;
+  top: 1px;
   background-size: 100% 100%;
   flex-shrink: 0;
   background-repeat: no-repeat;

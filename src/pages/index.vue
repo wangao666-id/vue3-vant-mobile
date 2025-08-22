@@ -255,7 +255,7 @@ const allOptions = [
         value: '0021',
       },
       { text: '思维能力', value: '0022' },
-      { text: '职场礼仪', value: '0023' },
+      // { text: '职场礼仪', value: '0023' },
     ],
   },
   {

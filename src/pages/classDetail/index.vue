@@ -24,7 +24,7 @@ function SignUp() {
     showPop.value = true
     return
   }
-  showToast('4月7日正式上线！')
+  showToast('8月22日 18:00 正式上线！')
 }
 </script>
 
